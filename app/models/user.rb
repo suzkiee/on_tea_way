@@ -1,4 +1,4 @@
-class Customer < ApplicationRecord
+class User < ApplicationRecord
   has_many :subscriptions, dependent: :destroy 
 
   validates :first_name, presence: true
