@@ -1,24 +1,9 @@
-# README
+![Frame 1](https://user-images.githubusercontent.com/70981102/133642726-e629b398-335c-4cdd-a576-bcaec0fbfd5a.png)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+On Tea Way is a tea subscription service that customizes tea packaging with images from the user. Users can either search for an image from the Unsplash API or upload their own. 
 
-Things you may want to cover:
+I built this API as part of my application to Shopify's BackEnd Engineering Internship Program. Currently, this is API only. 
 
-* Ruby version
+#### Schema 
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+#### Versions
