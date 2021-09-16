@@ -10,16 +10,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_12_194154) do
+ActiveRecord::Schema.define(version: 2021_09_16_171128) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "customers", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.string "email"
-    t.string "address"
+  create_table "active_storage_attachments", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "record_type", null: false
+    t.bigint "record_id", null: false
+    t.bigint "blob_id", null: false
+    t.datetime "created_at", null: false
+    t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
+    t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
+  end
+
+  create_table "active_storage_blobs", force: :cascade do |t|
+    t.string "key", null: false
+    t.string "filename", null: false
+    t.string "content_type"
+    t.text "metadata"
+    t.bigint "byte_size", null: false
+    t.string "checksum", null: false
+    t.datetime "created_at", null: false
+    t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "package_photos", force: :cascade do |t|
+    t.bigint "subscription_id"
+    t.bigint "photo_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["photo_id"], name: "index_package_photos_on_photo_id"
+    t.index ["subscription_id"], name: "index_package_photos_on_subscription_id"
+  end
+
+  create_table "photos", force: :cascade do |t|
+    t.string "url"
+    t.string "unsplash_id"
+    t.boolean "user_uploaded"
+    t.string "user_photo_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -46,6 +76,19 @@ ActiveRecord::Schema.define(version: 2021_09_12_194154) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "subscriptions", "customers"
+  create_table "users", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "email"
+    t.string "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "password_digest"
+  end
+
+  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "package_photos", "photos"
+  add_foreign_key "package_photos", "subscriptions"
   add_foreign_key "subscriptions", "teas"
+  add_foreign_key "subscriptions", "users", column: "customer_id"
 end
