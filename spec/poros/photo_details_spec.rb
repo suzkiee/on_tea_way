@@ -77,8 +77,8 @@ RSpec.describe 'Photo Details PORO' do
       photo = PhotoDetails.new(photo_hash)
       
       expect(photo).to be_a(PhotoDetails)
+      expect(photo.url).to eq(photo_hash[:urls][:regular])
       expect(photo.unsplash_id).to eq(photo_hash[:id])
-      expect(photo.unsplash_id).to eq(photo_hash[:urls][:regular])
       expect(photo.user_uploaded).to eq(false)
     end
   end
