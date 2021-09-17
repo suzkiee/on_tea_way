@@ -10,6 +10,7 @@ RSpec.describe User, type: :model do
   end
 
   describe 'relationships' do
+    it { should have_many(:photos) }
     it { should have_many(:subscriptions) }
   end
 end
