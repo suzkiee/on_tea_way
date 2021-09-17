@@ -33,6 +33,10 @@ gem 'faraday'
 gem 'figaro'
 gem 'graphql'
 gem "graphiql-rails"
+gem "aws-sdk-s3", require: false
+gem 'image_processing', '~> 1.2'
+gem 'active_storage_validations'
+gem 'apollo_upload_server', '2.0.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
