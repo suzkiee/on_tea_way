@@ -28,4 +28,25 @@ RSpec.describe 'Search Unsplash Photo', type: :request do
       expect(photo[:userUploaded]).to eq(false)
     end
   end
+
+  describe 'sad path' do
+    it 'returns all photos that match query', :vcr do
+      query = <<~GQL
+                query {
+                  searchPhotos(query: 0){
+                       url
+                       unsplashId
+                      userUploaded
+                  }
+                }
+                GQL
+
+      post '/graphql', params: { query: query}
+      json = JSON.parse(response.body, symbolize_names: true)
+      error = json[:errors][0]
+
+      expect(error[:message]).to eq("Argument 'query' on Field 'searchPhotos' has an invalid value (0). Expected type 'String!'.")
+      expect(error[:extensions][:code]).to eq("argumentLiteralsIncompatible")
+    end 
+  end
 end
