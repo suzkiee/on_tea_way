@@ -8,7 +8,7 @@ RSpec.describe 'Search Unsplash Photo', type: :request do
                   searchPhotos(query: "puppy"){
                        url
                        unsplashId
-                      userUploaded
+                       userUploaded
                   }
                 }
                 GQL
@@ -30,13 +30,13 @@ RSpec.describe 'Search Unsplash Photo', type: :request do
   end
 
   describe 'sad path' do
-    it 'returns all photos that match query', :vcr do
+    it 'returns error message when query is not a string', :vcr do
       query = <<~GQL
                 query {
                   searchPhotos(query: 0){
                        url
                        unsplashId
-                      userUploaded
+                       userUploaded
                   }
                 }
                 GQL
