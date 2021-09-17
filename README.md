@@ -43,13 +43,11 @@ query {
 uploadUserPhoto: uploads User Photo 
 
 ``` graphql 
-mutation($schema: Upload!) {
-   uploadUserPhoto(input: {upload: $schema}) {
-         photo {
+mutation($file: Upload!) {
+   uploadUserPhoto(input: {upload: $file}) {
               id
               unsplashId
               userUploaded
             }
           }
-        }
 ```
