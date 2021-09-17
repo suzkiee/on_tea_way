@@ -7,11 +7,12 @@ module Types
     # Add root-level fields here.
     # They will be entry points for queries on your schema.
 
-    # TODO: remove me
-    field :test_field, String, null: false,
-      description: "An example field added by the generator"
-    def test_field
-      "Hello World!"
+    field :search_photos, [Types::PhotoType], null: false, description: 'Returns photos that match a search term' do
+      argument :query, String, required: true
+    end
+
+    def search_photos(query:)
+      PhotoFacade.get_photos(query)
     end
   end
 end
