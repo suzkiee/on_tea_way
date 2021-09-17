@@ -38,4 +38,18 @@ query {
     }
   }
 ```
+### Mutations
 
+uploadUserPhoto: uploads User Photo 
+
+``` graphql 
+mutation($schema: Upload!) {
+   uploadUserPhoto(input: {upload: $schema}) {
+         photo {
+              id
+              unsplashId
+              userUploaded
+            }
+          }
+        }
+```
