@@ -4,12 +4,18 @@ On Tea Way is a tea subscription service that customizes tea packaging with imag
 
 I built this API as part of my application to Shopify's BackEnd Engineering Internship Program. Currently, this is API only. 
 
-#### Schema 
+### Schema 
 <img width="940" alt="Screen Shot 2021-09-16 at 9 00 17 PM" src="https://user-images.githubusercontent.com/70981102/133783814-1bf10226-94ff-4f3c-8254-00ab42e307ef.png">
 
 #### Versions
 
-
+### Tech Stack 
+<div display="inline-block"> 
+ <img src="https://img.shields.io/badge/RAILS-CC0000?logo=rubyonrails&logoColor=fff&style=flat-square" alt="Rails Badge"> 
+ <img src="https://img.shields.io/badge/CircleCI-343434?logo=circlecis&logoColor=fff&style=flat-square" alt="CircleCI Badge"> 
+ <img src="https://img.shields.io/badge/GraphQL-E434AA?logo=graphql&logoColor=fff&style=flat-square" alt="GraphQL Badge"> 
+ <img src="https://img.shields.io/badge/Heroku-430098?logo=heroku&logoColor=fff&style=flat-square" alt="Heroku Badge"> 
+</div>
 
 ## GraphQL Endpoints 
 
