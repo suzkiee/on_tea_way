@@ -53,10 +53,13 @@ uploadUserPhoto: uploads User Photo
 
 ``` graphql 
 mutation($file: Upload!) {
-   uploadUserPhoto(input: {upload: $file}) {
-       id
-       unsplashId
-       userUploaded
+   uploadUserPhoto(input: {
+         upload: $file
+         userId: 1
+         }) {
+              userId
+              unsplashId
+              userUploaded
             }
           }
 ```
