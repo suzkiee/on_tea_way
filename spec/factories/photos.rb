@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :photo do
+  factory :mock_photo, class: Photo do
     url { "MyString" }
     unsplash_id { "MyString" }
     user_uploaded { false }

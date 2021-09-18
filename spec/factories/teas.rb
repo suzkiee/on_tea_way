@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :tea do
+  factory :mock_tea, class: Tea do
     title { "MyString" }
     description { "MyString" }
     temperature { 1 }

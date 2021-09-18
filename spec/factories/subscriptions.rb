@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :subscription do
+  factory :mock_subscription, class: Subscription do
     customer { nil }
     tea { nil }
     title { "MyString" }
