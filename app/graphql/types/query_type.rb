@@ -14,5 +14,13 @@ module Types
     def search_photos(query:)
       PhotoFacade.get_photos(query)
     end
+
+    field :user_photos, Types::UserType, null: false do
+      argument :id, ID, required: true
+    end
+    
+    def user_photos(id:)
+      user = User.find(id)
+    end
   end
 end
