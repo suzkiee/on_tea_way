@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :package_photo do
+  factory :mock_package_photo, class: PackagePhoto do
     subscription { nil }
     photo { nil }
   end
