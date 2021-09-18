@@ -25,7 +25,7 @@ userPhotos: returns all users in database
 ``` graphql 
 query {
   userPhotos(id: 1){
-  	 id
+    id
     photos {
       id
       userUploaded
@@ -54,9 +54,9 @@ uploadUserPhoto: uploads User Photo
 ``` graphql 
 mutation($file: Upload!) {
    uploadUserPhoto(input: {upload: $file}) {
-              id
-              unsplashId
-              userUploaded
+       id
+       unsplashId
+       userUploaded
             }
           }
 ```
