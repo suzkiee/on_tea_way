@@ -20,17 +20,20 @@ I built this API as part of my application to Shopify's BackEnd Engineering Inte
 ## GraphQL Endpoints 
 
 ### Queries 
-getUsers: returns all users in database 
+
+userPhotos: returns all users in database 
 ``` graphql 
 query {
-  getUsers{
-     firstName
-     lastName
-     email
-     address
-     passwordDigest
+  userPhotos(id: 1){
+  	 id
+    photos {
+      id
+      userUploaded
+      unsplashId
+      userPhotoUrl
     }
   }
+}  
 ```
 
 searchPhotos: returns photos that match query from Unsplash API
