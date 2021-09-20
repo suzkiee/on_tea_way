@@ -66,8 +66,8 @@ mutation($file: Upload!) {
 uploadUnsplashPhoto: uploads photo using Unsplash url and id 
 ```graphql  
 mutation {
-   uploadUnsplashPhoto(input: 
-        {url: "https://images.unsplash.com/photo-1593134257782-e89567b7718a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNTEwMzZ8MHwxfHNlYXJjaHwxfHxwdXBweXxlbnwwfHx8fDE2MzIxNDM2MzY&ixlib=rb-1.2.1&q=80&w=1080"
+   uploadUnsplashPhoto(input: { 
+         url: "https://images.unsplash.com/photo-1593134257782-e89567b7718a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNTEwMzZ8MHwxfHNlYXJjaHwxfHxwdXBweXxlbnwwfHx8fDE2MzIxNDM2MzY&ixlib=rb-1.2.1&q=80&w=1080"
          userId: 1
          }) {
               userId
