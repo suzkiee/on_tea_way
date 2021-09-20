@@ -1,10 +1,11 @@
-![Frame 1](https://user-images.githubusercontent.com/70981102/133642726-e629b398-335c-4cdd-a576-bcaec0fbfd5a.png)
+![Frame 1 (1)](https://user-images.githubusercontent.com/70981102/134086600-28a6824f-d227-4612-85fb-12356ca7cdfc.png)
 
 On Tea Way is a tea subscription service that customizes tea packaging with images from the user. Users can either search for an image from the Unsplash API or upload their own. 
 
 I built this API as part of my application to Shopify's BackEnd Engineering Internship Program. Currently, this is API only. 
 
-### Schema 
+![Frame 3 (1)](https://user-images.githubusercontent.com/70981102/134086757-bf8a0d97-fc1f-46be-b61d-74623bcc8cb3.png)
+
 <img width="940" alt="Screen Shot 2021-09-16 at 9 00 17 PM" src="https://user-images.githubusercontent.com/70981102/133783814-1bf10226-94ff-4f3c-8254-00ab42e307ef.png">
 
 #### Versions
@@ -17,7 +18,8 @@ I built this API as part of my application to Shopify's BackEnd Engineering Inte
  <img src="https://img.shields.io/badge/Heroku-430098?logo=heroku&logoColor=fff&style=flat-square" alt="Heroku Badge"> 
 </div>
 
-## GraphQL Endpoints 
+![Frame 4](https://user-images.githubusercontent.com/70981102/134086683-4d8f0623-2c68-45f0-a9cc-d844c4d05b64.png)
+
 
 ### Queries 
 
