@@ -44,9 +44,9 @@ I've created this API as a submission to [Shopify's BackEnd Engineering Internsh
 - Create Package Photos 
 
 #### Important Gems 
-- Testing: factory-bot_rails, faker, pry, shoulda-matchers, simplecov, webmock, vcr
-- Dev/Production: aws-sdk-s3, apollo_upload_server, image_processing
-- API: faraday, graphql
+- **Testing:** factory-bot_rails, faker, pry, shoulda-matchers, simplecov, webmock, vcr
+- **Dev/Production:** aws-sdk-s3, apollo_upload_server, image_processing
+- **API:** faraday, graphql
 
 #### Schema 
 
