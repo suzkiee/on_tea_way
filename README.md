@@ -82,9 +82,9 @@ To get a local copy up and running follow these simple example steps.
 [RSpec](https://rspec.info/)
 
 1. To run testing suite
-```rb
-bundle exec rspec
-```
+    ```rb
+    bundle exec rspec
+    ```
 
 ## GraphQL Endpoints 
 
