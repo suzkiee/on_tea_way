@@ -18,7 +18,7 @@ I've created this API as a submission to [Shopify's BackEnd Engineering Internsh
       </ul>
     </li>
    <li><a href="#schema">Schema</a></li>
-    <li><a href="#graphql-endpoints">GraphiEndpoints</a></li>
+    <li><a href="#graphql-endpoints">GraphQL Endpoints</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
