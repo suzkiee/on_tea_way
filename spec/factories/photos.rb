@@ -1,8 +1,8 @@
 FactoryBot.define do
   factory :mock_photo, class: Photo do
-    url { "MyString" }
-    unsplash_id { "MyString" }
-    user_uploaded { false }
-    user_photo_url { "MyString" }
+    url { Faker::Internet.url }
+    unsplash_id { Faker::Lorem.sentence }
+    user_uploaded { true }
+    user_photo_url { Faker::Internet.url }
   end
 end
