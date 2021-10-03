@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe TeaService do
   describe '::find_tes' do
-    it 'connects to Tea API' do
+    it 'connects to Tea API', :vcr do
       response = TeaService.find_tea("jasmine")
      
       expect(response).to be_a(Hash)
