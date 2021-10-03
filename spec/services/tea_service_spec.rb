@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe TeaService do
   describe '::find_tes' do
-    it 'connects to Tea API' do 
+    it 'connects to Tea API' do
       response = TeaService.find_tea("jasmine")
      
       expect(response).to be_a(Hash)
@@ -20,7 +20,13 @@ RSpec.describe TeaService do
       expect(response[:comments][0]).to have_key(:date)
       expect(response[:comments][0]).to have_key(:_id)
       expect(response[:comments][0]).to have_key(:text)
-    end 
+    end
 
-  end 
-end 
+    it 'sad path: connects to Tea API but cannot find tea from query' do
+      response = TeaService.find_tea("puppy")
+
+      expect(response).to be_a(String)
+      expect(response).to eq("Cannot find the puppy tea...")
+    end
+  end
+end
